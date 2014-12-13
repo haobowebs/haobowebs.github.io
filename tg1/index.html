@@ -154,6 +154,7 @@
 			console.log(username+"____"+password+"____"+password2+"____"+phone+"____"+code);
 			
 			/*
+			
 			$.ajax({
 				url: 'http://www.88haobo.com/index.php?c=register&m=add&this_time='+new Date().getTime(),
 				type:"POST",
@@ -164,6 +165,13 @@
 					console.log(data)
 				}jsonp: "callback",
 			});
+			document.domain="88haobo.com";
+			$.post("http://88haobo.com/index.php?c=register&m=userexists&this_time="+new Date().getTime(),{"username":username,"btn_submit":1},function(data,status){
+				console.log(data+"+++++++++"+status);
+			});
+			
+			*/
+			
 			$.ajax({
 				url: 'http://www.88haobo.com/index.php?c=register&m=userexists&this_time='+new Date().getTime(),
 				type:"POST",
@@ -173,10 +181,6 @@
 				success: function (data) {
 					console.log(data)
 				}
-			});*/
-			document.domain="88haobo.com";
-			$.post("http://88haobo.com/index.php?c=register&m=userexists&this_time="+new Date().getTime(),{"username":username,"btn_submit":1},function(data,status){
-				console.log(data+"+++++++++"+status);
 			});
 			
 			
