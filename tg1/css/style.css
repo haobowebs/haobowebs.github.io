@@ -25,7 +25,7 @@ html { overflow-y: scroll;}
 body{background: #242424;}/*min-height: 1173px;height: 1690px;*/
 .page_ico{background:url(../img/ico.png) no-repeat;}
 
-.page{background: url("../img/bg.jpg") no-repeat scroll  top center #242424;background-size:cover;width:100%;position: absolute;overflow: hidden;}
+.page{background: url("../img/bg.jpg") no-repeat scroll  top center #242424;background-size:cover;width:100%;position: absolute;overflow: hidden;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://cdn.88haobo.com/tg1/img/bg.jpg',sizingMethod='scale');}
 /*
 .page .top_bg{width:966px;height:428px;background:url(../img/bg_02.jpg) no-repeat;}
 .page .center_bg{width:966px;height:419px;background:url(../img/bg_04.jpg) no-repeat;}
