@@ -1,6 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta name="robots" content="noindex,nofollow">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>豪博亚洲</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
@@ -19,9 +22,17 @@
         <img class="light light3" src="img/light.png"></img>
         <img class="light light4" src="img/light.png"></img>
         
-        <div class="marquee_gg">
+        
+        
+        
+    </div>
+    
+    	<!--滚动条-->
+    	<div class="marquee_gg">
         	<marquee>恭喜XXX中奖  恭喜XXX中奖  恭喜XXX中奖  恭喜XXX中奖</marquee>
         </div>
+        <!--/滚动条-->
+        <!--内容--->
     	<div class="content">
         	<div class="c_left">
             	<div class="cl_title">
@@ -118,21 +129,36 @@
                 
             </div>
             
-            
-           
-            
         </div>
+        <!--内容-->
         
         
-        
-        
-    </div>
     <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 	<script type="text/jscript">
+		
+		/*闪动特效*/
 		function imgfade(){
-			$(".page .light").fadeIn(700,function(){$(this).fadeOut(700);});
+			//$(".page .light").fadeIn(700,function(){$(this).fadeOut(700);});
 		}
 		setInterval(imgfade,1400);
+		
+		/*图片自适
+		$(".content").css({"top":$(window).width()/1.8-600});
+			$(".content").css({"top":$(window).width()/1.8-600});
+			console.log($(window).width()/1.8-600);
+		应*/
+		
+		setTopSize();
+		$(window).resize(function(){
+			setTopSize();
+		});
+		function setTopSize(){
+			$(".page").css({"width":$(window).width(),"height":$(window).width()/1.8});
+			$(".content").css({"top":$(window).width()/1.8-$(window).width()/1.8*0.25});
+			$(".marquee_gg").css({"top":$(window).width()/1.8-$(window).width()/1.8*0.26});
+		}
+		
+		
 		
 		/*
 		        "pid": pid,
@@ -173,7 +199,7 @@
 			*/
 			document.domain="88haobo.com";
 			$.ajax({
-				url: 'http://88haobo.com/index.php?c=register&m=userexists&this_time='+new Date().getTime(),
+				url: '/index.php?c=register&m=userexists&this_time='+new Date().getTime(),
 				type:"POST",
 				data:{"username":username,"btn_submit":1},
 				dataType: "jsonp",

@@ -22,22 +22,23 @@ table {border-collapse: collapse;border-spacing: 0;}
 hr {border: none;height: 1px;}
 html { overflow-y: scroll;}
 
-body{background: #242424;}
-.page{min-height: 1173px;background: url("../img/bg.jpg") no-repeat scroll top center #242424;height: 1690px;}
+body{background: #242424;}/*min-height: 1173px;height: 1690px;*/
+.page_ico{background:url(../img/ico.png) no-repeat;}
+
+.page{background: url("../img/bg.jpg") no-repeat scroll  top center #242424;background-size:cover;width:100%;position: absolute;overflow: hidden;}
 /*
 .page .top_bg{width:966px;height:428px;background:url(../img/bg_02.jpg) no-repeat;}
 .page .center_bg{width:966px;height:419px;background:url(../img/bg_04.jpg) no-repeat;}
 */
-.page .marquee_gg{top: 790px;width: 100%;height: 30px;line-height: 30px;background: rgba(0, 0, 0, 0.3);+background:#999;position: relative;color: #fff;}
-.page_ico{background:url(../img/ico.png) no-repeat;}
-
+.marquee_gg{width: 100%;height: 30px;line-height: 30px;background: rgba(0, 0, 0, 0.3);+background:#999;position: relative;color: #fff;top:760px}
 .page .light{width:215px;height:248px;position: absolute;}
-.page .light1{left: 50%;margin-left: 184px;margin-top: 71px;}
-.page .light2{right: 50%;top: 172px;width: 131px;height: 145px;margin-right: 48px;}
-.page .light3{right: 50%;margin-right: 607px;top: 13px;width: 122px;height: 139px;}
-.page .light4{left: 50%;margin-left: 835px;width: 120px;height: 128px;margin-top: 97px;}
+.page .light1{left: 50%;margin-left: 9%;margin-top: 4%;}
+.page .light2{right: 50%;top: 15%;width: 131px;height: 145px;margin-right: 2%;}
+.page .light3{right: 50%;margin-right: 31%;top: 0.5%;width: 122px;height: 139px;}
+.page .light4{left: 50%;margin-left: 43.5%;width: 120px;height: 128px;margin-top: 5%;}
 
-.content {width: 1020px;color: #AEAEAE;position: relative;top: 845px;text-align: center;margin: 0 auto;}
+
+.content {width: 1020px;color: #AEAEAE;position: relative;text-align: center;margin: 0 auto;top:790px;}
 .content .c_left{width: 471px;float: left;border-right: 1px solid rgb(76, 90, 143);padding: 0px 19px;}
 .c_left .cl_title{width: 100%;float: left;}
 
