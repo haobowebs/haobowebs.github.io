@@ -143,16 +143,11 @@
 		
 		/*闪动特效*/
 		function imgfade(){
-			//$(".page .light").fadeIn(700,function(){$(this).fadeOut(700);});
+			$(".page .light").fadeIn(700,function(){$(this).fadeOut(700);});
 		}
 		setInterval(imgfade,1400);
 		
-		/*图片自适
-		$(".content").css({"top":$(window).width()/1.8-600});
-			$(".content").css({"top":$(window).width()/1.8-600});
-			console.log($(window).width()/1.8-600);
-		应*/
-		
+		/*图片自适应*/
 		setTopSize();
 		$(window).resize(function(){
 			setTopSize();
@@ -204,11 +199,10 @@
 			*/
 			document.domain="88haobo.com";
 			$.ajax({
-				url: '/index.php?c=register&m=userexists&this_time='+new Date().getTime(),
-				type:"POST",
+				url: 'http://88haobo.com/index.php?c=register&m=userexists&this_time='+new Date().getTime(),
+				type:"post",
 				data:{"username":username,"btn_submit":1},
 				dataType: "jsonp",
-				
 				success: function (data) {
 					console.log(data)
 				}
