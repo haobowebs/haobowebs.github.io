@@ -199,8 +199,8 @@
 			*/
 			document.domain="88haobo.com";
 			$.ajax({
-				url: 'http://88haobo.com/index.php?c=register&m=userexists&this_time='+new Date().getTime(),
-				type:"post",
+				type:"POST",
+				url: '/index.php?c=register&m=userexists&this_time='+new Date().getTime(),
 				data:{"username":username,"btn_submit":1},
 				dataType: "jsonp",
 				success: function (data) {
